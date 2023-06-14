@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block sidebar %}
+<div class="download" id="downloadLink">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img id="downloadBtn" src="{% static 'DownloadBtn.svg' %}" alt="download">
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <div id="adminBtn">
+            ADMIN PANEL
+        </div>
+    </a>
+</div>
+
+
+{% endblock sidebar %}
+
+{% block main %}
+<div class="login">
+    <form class="form" action="/login" method="POST" enctype="multipart/form-data">
+        {% load widget_tweaks %}
+        {% csrf_token %}
+        {% render_field form.username placeholder=form.username.label id='username' %}
+        {% render_field form.password placeholder=form.password.label  %}
+        <input type="submit" value="Connect" id="btn">
+    </form>
+</div>
+{% endblock main %}

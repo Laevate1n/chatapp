@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Chatting as {{userID}} {% endblock title %}
+{% block main %}
+
+
+<div class="chatroom">
+    <div class="messages">
+        <ul id='messageList'>
+        </ul>
+    </div>
+    <div class="typingpanel">
+        <form id="messageform" action="/chatroom" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input id="textbox" type="text" placeholder="Type here...">
+            <button id="sendBtn" type="button" onclick=fuckyou()> send </button>
+        </form>
+    </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDNM59E9srQF_jR9twhTMHKenLl1wftzq0",
+        authDomain: "chat-app-17441.firebaseapp.com",
+        databaseURL: "https://chat-app-17441-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "chat-app-17441",
+        storageBucket: "chat-app-17441.appspot.com",
+        messagingSenderId: "432326459066",
+        appId: "1:432326459066:web:0db2fe977188c340db4c83",
+        measurementId: "G-BBXGMT9HS6"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const query = db.collection('messages').orderBy('timestamp');
+
+    
+    function fuckyou(){
+        //log text from page
+        var msg = document.getElementById('textbox').value;
+        if(msg.length == 0) return;
+        document.getElementById('textbox').value=""
+        var user = '{{userID}}';
+        var timestamp = firebase.firestore.Timestamp.now()
+        const data={
+            content: msg,
+            senderid: user,
+            timestamp: timestamp
+        }
+        var res = db.collection('messages').doc(timestamp.toString()).set(data)
+
+    }
+    const observer = query.onSnapshot(function(snapshot) {
+        snapshot.docChanges().forEach(function(change){
+            if(change.type === 'added'){
+                //console.log(change.doc.data().senderid)
+                var list ='<li id="message">'.concat(change.doc.data().senderid,': ',change.doc.data().content,'</li>');
+                document.getElementById('messageList').innerHTML += list;
+            }
+        })
+    })
+</script>
+{% endblock main %}
+
+{% block sidebar %}
+<div class="download" id="downloadLink">
+    <a href="{% url 'chat:login' %}">
+        <div id="downloadBtn">
+            Log Out
+        </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <div id="adminBtn">
+            ADMIN PANEL
+        </div>
+    </a>
+</div>
+
+{% endblock sidebar %}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="825.93262mm"
+   height="313.84714mm"
+   viewBox="0 0 825.93261 313.84714"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="DownloadBtn.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="25"
+     fit-margin-left="25"
+     fit-margin-right="25"
+     fit-margin-bottom="25"
+     inkscape:zoom="0.17606493"
+     inkscape:cx="1485.2475"
+     inkscape:cy="624.76952"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8130" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(4.0671461,-8.3399585)">
+    <g
+       id="g8130">
+      <g
+         id="g8143">
+        <path
+           style="fill:#424449;fill-opacity:1;stroke:#424449;stroke-width:0.290305px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 68.794296,33.485111 V 218.86554 H 21.283283 l 78.116269,78.11627 78.116268,-78.11627 H 130.0048 V 33.485111 Z"
+           id="path1016" />
+        <text
+           xml:space="preserve"
+           style="font-size:141.111px;line-height:1.25;font-family:sans-serif;fill:#424449;fill-opacity:1;stroke:#424449;stroke-width:0.264583;stroke-opacity:1"
+           x="137.32179"
+           y="202.77654"
+           id="text4033"><tspan
+             sodipodi:role="line"
+             id="tspan4031"
+             style="font-size:141.111px;fill:#424449;fill-opacity:1;stroke:#424449;stroke-width:0.264583;stroke-opacity:1"
+             x="137.32179"
+             y="202.77654">Download</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

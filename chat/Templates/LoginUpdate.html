@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Redirect{% endblock title %}
+{% block main %}
+<div class="login">
+    <p>
+        {{status}} <br>
+        <a href="{% url 'chat:login' %}">click here to go back to login screen</a>
+    </p>
+    
+</div>
+{% endblock main %}
